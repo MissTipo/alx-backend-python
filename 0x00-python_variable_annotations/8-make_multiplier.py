@@ -2,6 +2,7 @@
 '''Complex types - functions'''
 from typing import Callable
 
+
 def make_multiplier(multiplier: float) -> Callable[[float], float]:
     '''
     that takes a float multiplier as argument and returns a function
