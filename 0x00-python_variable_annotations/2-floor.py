@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
-'''path'''
+'''Basic annotations - floor'''
+
 
 def floor(n: float) -> int:
-    '''function'''
+    '''Takes a float n as argument and returns the floor of the float'''
     return int(n)
