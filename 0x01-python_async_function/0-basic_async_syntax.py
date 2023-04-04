@@ -4,10 +4,10 @@ import asyncio
 import random
 
 
-async def wait_random(max_delay = 10):
+async def wait_random(max_delay=10):
     """
-     Asynchronous coroutine that waits for a random delay between
-     0 and `max_delay` seconds (inclusive) and eventually returns the delay time.
+     Asynchronous coroutine that waits for a random delay between 0 and
+     `max_delay` seconds (inclusive) and eventually returns the delay time.
 
     Args:
         max_delay (float): Maximum delay time in seconds (inclusive).
