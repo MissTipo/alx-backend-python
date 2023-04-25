@@ -14,7 +14,7 @@ class TestAccessNestedMap(unittest.TestCase):
     """
     @parameterized.expand([
         ({'a': 1}, ['a'], 1),
-        ({'a': {'b': 2}}, ['a',], {'b': 2}),
+        ({'a': {'b': 2}}, ['a'], {'b': 2}),
         ({'a': {'b': 2}}, ['a', 'b'], 2)
     ])
     def test_access_nested_map(self, nested_map, path, expected_output):
@@ -40,7 +40,6 @@ class TestGetJson(unittest.TestCase):
         ("http://example.com", {"payload": True}),
         ("http://holberton.io", {"payload": False})
     ])
-
     def test_get_json(self, test_url, test_payload):
         """Tests that utils.get_json returns the expected result"""
         with mock.patch('requests.get') as mock_get:
@@ -54,7 +53,7 @@ class TestMemoize(unittest.TestCase):
     def test_memoize(self):
         """"""
         class TestClass:
-
+            """"""
             def a_method(self):
                 return 42
 
