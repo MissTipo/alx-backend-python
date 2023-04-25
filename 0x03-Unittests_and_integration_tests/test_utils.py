@@ -29,16 +29,15 @@ class TestAccessNestedMap(unittest.TestCase):
         ({}, ['a']),
         ({'a': 1}, ['a', 'b'])
         ])
-
     def test_access_nested_map_exception(self, nested_map, expected_output):
         """"""
         self.assertRaises(KeyError)
 
 
 class TestGetJson(unittest.TestCase):
-    """"""
+    """Contains the method to test utils.get_json"""
     def test_get_json(self):
-        """"""
+        """Tests that utils.get_json returns the expected result"""
         test_payload = {'key': 'value'}
         test_url = 'http://example.com'
         with mock.patch('requests.get') as mock_get:
