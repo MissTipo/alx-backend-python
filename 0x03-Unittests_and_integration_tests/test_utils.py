@@ -17,7 +17,7 @@ class TestAccessNestedMap(unittest.TestCase):
         ({'a': {'b': 2}}, ['a',], {'b': 2}),
         ({'a': {'b': 2}}, ['a', 'b'], 2)
     ])
-    def test_access_nested_map(self, nested_map: Mapping, path: Sequence, expected_output: Union[int, str, Dict, List]) -> Any:
+    def test_access_nested_map(self, nested_map, path, expected_output):
         """
         Calls the access_tested_map with the given input and asserts that the
         result is equal to the expected output
