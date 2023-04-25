@@ -2,9 +2,8 @@
 """Parameterize a unit test"""
 import unittest
 from unittest import mock
-import meoize
 import requests
-from utils import access_nested_map, get_json
+from utils import access_nested_map, get_json, memoize
 from typing import Mapping, Sequence, Union, Dict, List, Any, Tuple
 from parameterized import parameterized
 
