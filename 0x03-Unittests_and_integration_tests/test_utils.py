@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """Parameterize a unit test"""
 import unittest
-from utils import access_nested_map
+from unittest import mock
+import requests
+from utils import access_nested_map, get_json
 from typing import Mapping, Sequence, Union, Dict, List, Any, Tuple
 from parameterized import parameterized
 
@@ -32,3 +34,14 @@ class TestAccessNestedMap(unittest.TestCase):
         """"""
         self.assertRaises(KeyError)
 
+
+class TestGetJson(unittest.TestCase):
+    """"""
+    def test_get_json(self):
+        """"""
+        test_payload = {'key': 'value'}
+        test_url = 'http://example.com'
+        with mock.patch('requests.get') as mock_get:
+            mock_get.return_value.json.return_value = test_payload
+            response = get_json(test_url)
+            self.assertEqual(response, test_payload)
