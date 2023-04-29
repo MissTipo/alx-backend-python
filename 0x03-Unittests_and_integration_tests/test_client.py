@@ -24,7 +24,7 @@ class TestGithubOrgClient(unittest.TestCase):
         test_client = GithubOrgClient(org_name)
         test_return = test_client.org
         self.assertEqual(test_return, mock_get.return_value)
-        # mock_get.assert_called_once
+        mock_get.assert_called_once
 
     def test_public_repos_url(self):
         """ to unit-test GithubOrgClient._public_repos_url """
@@ -68,7 +68,7 @@ class TestGithubOrgClient(unittest.TestCase):
     TEST_PAYLOAD
 )
 class TestIntegrationGithubOrgClient(unittest.TestCase):
-    """ TESTCASE """
+    """ Mock code that sends external request """
     @classmethod
     def setUpClass(cls):
         """ It is part of the unittest.TestCase API
